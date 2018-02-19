@@ -1,0 +1,16 @@
+.card {
+    width: 50%;
+    height: 50%;
+    background-color: #333;
+    background-image: url('https://static.pexels.com/photos/12567/photo-1444703686981-a3abbc4d4fe3.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    cursor: pointer;
+  }
