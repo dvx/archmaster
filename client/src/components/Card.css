@@ -60,7 +60,7 @@
 }
 
 .card-stats {
-  position: fixed;
+  position: absolute;
   padding: 1vh;
   font-size: 2vh;
   background: #000000b3;
