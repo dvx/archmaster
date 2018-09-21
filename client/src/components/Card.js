@@ -10,7 +10,7 @@ class Card extends Component {
     }
 
     getAngle(minPos, maxPos, minAng, maxAng, pos) {
-        return (minAng-maxAng)/(minPos-maxPos)*(pos-minPos) + minAng;
+        return (minAng-maxAng) / (minPos-maxPos) * (pos-minPos) + minAng;
     }
 
     shiftPerspective(e) {
@@ -27,20 +27,20 @@ class Card extends Component {
         let height = node.clientHeight;
         let width = node.clientWidth;
         let pos = {
-          x: e.pageX - offset.left - width/2,
-          y: e.pageY - offset.top - height/2
+          x: e.pageX - offset.left - width / 2,
+          y: e.pageY - offset.top - height / 2
         }
         let min = {
-          x: -width/2,
-          y: -height/2
+          x: -width / 2,
+          y: -height / 2
         }
         let max = {
-          x: width/2,
-          y: height/2
+          x: width / 2,
+          y: height / 2
         }
         let newAngle = {
-          x: Math.round(this.getAngle(min.x, max.x, angle.min, angle.max, pos.x)*100)/100,
-          y: -1*Math.round(this.getAngle(min.y, max.y, angle.min, angle.max, pos.y)*100)/100
+          x: Math.round(this.getAngle(min.x, max.x, angle.min, angle.max, pos.x) * 100) / 100,
+          y: -1 * Math.round(this.getAngle(min.y, max.y, angle.min, angle.max, pos.y) * 100) / 100
         }
 
         let newRotationStyle = "rotateX( " + newAngle.y + "deg ) rotateY( " + newAngle.x + "deg )";
@@ -61,7 +61,25 @@ class Card extends Component {
 
     render() {
         return (
-            <div className="card" onMouseOut={this.doneShiftingPerspective.bind(this)} onMouseMove={this.throttledShiftPerspective} onMouseOver={this.throttledShiftPerspective}>this is a card</div>
+            <div
+                className="card"
+                onMouseOut={this.doneShiftingPerspective.bind(this)}
+                onMouseMove={this.throttledShiftPerspective}
+                onMouseOver={this.throttledShiftPerspective}>
+                    <div className="card-stats">
+                        <div className="attack"><span className="arch-sharp-axe attack"></span> 8</div>
+                        <div className="defense"><span className="arch-cracked-shield defense"></span> 12</div>
+                        <div className="vp"><span className="arch-trophy vp"></span> 5</div>
+                    </div>
+                    <div className="card-drop"><span>25</span></div>
+                    <div className="card-details">
+                        <div className="card-name"><span className="card-title">Corsair Dragon, Kingdom's Bane</span></div>
+                        <div className="card-actions">
+                            <p>Whenever <strong>Corsair Dragon, Kingdom's Bane</strong> enters play, deal <strong>5 damage</strong> to all <strong>buildings</strong>, draw <strong>2 cards</strong>, and roll <strong>1 resource</strong>.</p>
+                            <p className="card-flavor">"A kingdom founded on injustice never lasts."</p>
+                        </div>
+                    </div>
+            </div>
         );
     }
 }
