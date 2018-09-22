@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Form, FormGroup, Button, FormControl, ControlLabel, Checkbox } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import Card from './Card'
 import CardBuilder from './CardBuilder'
 
@@ -16,10 +16,10 @@ class PrintCard extends Component {
         return(
             <Row className="main">
                 <Col lg={6} sm={12} className="left">
-                    <Card payload={this.card}/>
+                    <Card />
                 </Col >
                 <Col lg={6} sm={12} className="right">
-                    <CardBuilder payload={this.card}/>
+                    <CardBuilder />
                 </Col >
             </Row>
         );

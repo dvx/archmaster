@@ -125,3 +125,35 @@
   color: #00ff6a;
   text-shadow: 0px 0px 1vh black;  
 }
+
+.holo {
+  height: 100%;
+position: absolute;
+width: 100%;
+  background: linear-gradient(270deg, #ec141433, #eccb1433, #14ec1c33, #14eaec33, #1914ec33, #ec14da33);
+background-size: 1200% 1200%;
+-webkit-animation: Logo 4s ease infinite;
+-moz-animation: Logo 4s ease infinite;
+-o-animation: Logo 4s ease infinite;
+animation: Logo 4s ease infinite;
+}
+@-webkit-keyframes Logo {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes Logo {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-o-keyframes Logo {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes Logo {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

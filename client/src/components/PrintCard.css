@@ -8,7 +8,8 @@
 }
 
 .right {
-  display: flex;
+  display: block;
+  overflow: auto;
   justify-content: center;
   align-items: center;
   background-color: #FFF;
@@ -21,6 +22,6 @@
     height: 50%
   }
   .right {
-    height: 50%
+    height: 50%;
   }
 }
